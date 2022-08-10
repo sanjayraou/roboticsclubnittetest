@@ -250,13 +250,13 @@ nav p {
 }
 .w-box {
   width: 20%;
-  padding: 4rem 0.8rem;
+  padding: 2.5rem 1rem;
   height: auto;
   background-color: #fff;
   border: 3px solid #39cbff;
   border-radius: 8px;
   text-align: center;
-  margin: 0.5rem 1.5rem;
+  margin: 0.5rem 1rem;
 }
 .w-box h3 {
   font-size: 180%;
@@ -265,7 +265,7 @@ nav p {
 .w-box p {
   font-size: 150%;
   text-align: justify;
-  padding: 0.8rem 1rem;
+  padding: 0.8rem 0.6rem;
 }
 
 /*Alliagtors div*/
@@ -448,18 +448,436 @@ nav p {
 }
 /*Responsive Design*/
 @media screen and (max-width: 1200px) {
-  .achievements {
+  body {
+    font-size: 50%;
+    width: 100%;
+  }
+  * {
+    overflow-x: hidden;
+  }
+  ::-webkit-scrollbar {
+    width: 2px;
+    height: 8px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background-color: #ffffff;
+    border-radius: 6px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #194d82;
+    border-radius: 6px;
+  }
+  nav {
+    height: 4rem;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    width: 100%;
+    gap: 8rem;
+    overflow-x: hidden;
+  }
+  .nav-home {
+    background-image: url("Images/Top background_mobile.png");
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 87%, 0% 100%);
+    height: 100%;
+  }
+  nav p {
+    font-size: 90%;
+    font-weight: 500;
+    line-height: 4rem;
+  }
+  .nav-list {
+    position: fixed;
+    text-align: center;
     display: block;
+    visibility: visible;
+    overflow: hidden;
+    top: 0rem;
+    z-index: 900;
+    left: -110%;
+    width: 100%;
+    height: 100vh;
+    transition: all 0.7s;
+    background: #194d82;
+  }
+  .nav-list ul {
+    margin-top: 4rem;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .li-btn {
+    position: relative;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 600;
+  }
+  .nav-list li {
+    color: white;
+    line-height: 70px;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+  }
+  .menu-icon {
+    visibility: visible;
+    display: block;
+    z-index: 1000;
+    transition: all 0.3s;
+  }
+  #check {
+    display: none;
+  }
+  #check:checked ~ .nav-list {
+    left: 0%;
+  }
+  #check:unchecked ~ .nav-list {
+    left: -110%;
+  }
+  .li-btn:hover {
+    cursor: pointer;
+  }
+  .li-btn::after {
+    content: "";
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 3px;
+    background-color: var(--check-primary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  .li-btn:hover::after {
+    transform: none;
+    cursor: pointer;
+  }
+
+  .logo {
+    display: flex;
+    float: left;
+  }
+  .nav-logo {
+    display: inline-block;
+    line-height: 4rem;
+    width: 3.5rem;
+  }
+  .logo p {
+    font-size: 150%;
+  }
+
+  .home {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+  .details-home {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0.3rem 2rem;
+    text-align: center;
+  }
+  .details-home h2 {
+    font-size: 220%;
+    text-align: justify;
+    padding: 0.3rem;
+    margin: 0;
+  }
+  .btn-home {
+    display: inline-block;
+    font-size: 120%;
+    font-weight: 550;
+    padding: 0.5rem 3rem 0.5rem 3rem;
+  }
+  .btn-home:hover {
+    padding: 0.5rem 3rem 0.5rem 3rem;
+  }
+  .bot-image {
+    width: 100%;
+    text-align: center;
+    margin-top: 6rem;
+    padding: 0;
+  }
+  .bot-image img {
+    width: 55%;
+  }
+  .about-us {
     height: auto;
-    margin-bottom: 10rem;
+    width: 100%;
+  }
+  .about-us-cnt {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+  }
+  .about-txt-cnt {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  .about-txt {
+    overflow: hidden;
+  }
+  .a-img-cnt {
+    padding: 0;
+    margin: 0;
+    display: block;
+    width: 100%;
+  }
+  .a-heading {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .a-heading h2 {
+    display: block;
+    font-size: 200%;
+    width: 100%;
+  }
+  .about-us-cnt {
+    width: 100%;
+    margin: 1.5rem 0.5rem;
+    padding: 0%;
+  }
+
+  .about-text h3 {
+    font-size: 220%;
+  }
+  .about-text p {
+    font-size: 180%;
+  }
+  .a-img-cnt {
+    text-align: center;
+    padding: 0.8rem;
+    margin-top: 2rem;
+  }
+  .about-img {
+    width: 80%;
+  }
+
+  .w-heading {
+    display: inline-block;
+    text-align: center;
+    margin: 0.5rem;
+    font-size: 220%;
+  }
+  .workshops {
+    background-image: url("Images/Workshop background.png");
+    height: auto;
+    width: 100%;
+  }
+  .w-heading {
+    display: inline-block;
+    width: auto;
+    padding-left: 1rem;
+    text-align: center;
+    margin-left: 30%;
+    margin-top: 2rem;
+  }
+  .ws-container {
+    margin: 0;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+  }
+  .w-img img {
+    width: 25%;
+  }
+  .w-box {
+    width: 80%;
+    margin: 1.5rem 0 0 0;
+    padding: 2rem 0.5rem;
+    height: auto;
+    text-align: center;
+    justify-content: center;
+  }
+  .w-box h3 {
+    padding-top: 1.5rem;
+  }
+  .w-box p {
+    font-size: 180%;
+    text-align: justify;
+    padding: 0.8rem;
+  }
+  .alligator-div {
+    background-image: url("Images/Alligators_background_mobile.png");
+    background-size: cover;
+    display: flex;
+    width: 100%;
+    overflow-x: hidden;
+    flex-direction: column;
+  }
+  .alligators-container {
+    display: flex;
+    margin: 0rem;
+    width: 90%;
+    padding: 1.5rem;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .al-logo {
+    padding: 0;
+    text-align: center;
+    margin-top: 5rem;
+  }
+  .al-logo img {
+    width: 50%;
+  }
+  .division {
+    display: block;
+    width: 100%;
+    margin: 1rem;
+    position: relative;
+    text-align: center;
+    height: 50vh;
+    overflow-y: hidden;
+    border-radius: 20px;
+    padding: 2.5rem 2.5rem;
+  }
+  .division::after {
+    content: url("Images/combat_bot.png");
+    top: 13rem;
+    right: -1.5rem;
+    transform: scale(0.6);
+    z-index: 1200;
+    position: absolute;
+  }
+  .division:nth-child(2)::after {
+    content: url("Images/drone.png");
+    top: 12rem;
+    right: -3rem;
+    z-index: 1000;
+    transform: scale(0.6);
+    position: absolute;
+  }
+  .division h3 {
+    font-size: 250%;
+  }
+  .division p {
+    font-size: 150%;
+  }
+
+  .contact_us {
+    height: auto;
+    display: flex;
+    margin-top: 1rem;
+    z-index: 1200;
+    flex-direction: column;
+    background-color: rgba(201, 201, 201, 0.2);
+  }
+  .contact-left {
+    display: block;
+    width: 100%;
+    padding: 2rem;
+  }
+  .contact-left h3 {
+    color: #fff;
+    font-size: 300%;
+    padding-top: 0;
+    text-transform: uppercase;
+  }
+
+  .form {
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .form h3 {
+    display: block;
+    font-size: 300%;
+    margin: 1rem 0 0 0;
+    padding: 0;
+  }
+  .form form {
+    display: block;
+    padding: 0;
+    margin: 0.5rem 0 0 0;
+    text-align: center;
+  }
+
+  .form form label {
+    font-size: 185%;
+    margin-top: 1.5rem;
+  }
+  .form form input {
+    width: 20rem;
+    font-size: 170%;
+  }
+  .form form button {
+    margin-top: 2.5rem;
+    display: inline-block;
+  }
+  .social {
+    margin-top: 1.5rem;
+    margin-left: auto;
+    text-align: center;
+  }
+  .social a {
+    color: #232323;
+    padding: 0rem 1.5rem 0 0rem;
+    margin: 0.3rem;
+    text-decoration: none;
+    font-size: 1.3rem;
+  }
+  .achievements {
+    height: auto;
+    display: block;
+    overflow: hidden;
+    margin-bottom: 1rem;
   }
   .achievement-div {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     border-radius: 0.6rem;
     background: #f4f4f4;
     padding: 1rem;
     margin: 2rem 1.5rem;
+  }
+  .achievement-img {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    text-align: center;
+  }
+  .achievement-cnt {
+    width: 100%;
+    margin: auto;
+    padding: 1rem;
+    text-align: justify;
+  }
+  .achievement-cnt p {
+    font-size: 160%;
+  }
+  .know-more {
+    display: block;
+    margin: 1rem;
+    text-align: center;
+  }
+  .know-more a {
+    text-decoration: none;
+    font-size: 180%;
+    text-align: center;
+    color: #232323;
+  }
+  .know-more ion-icon {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0rem;
+    font-size: 180%;
   }
 }
 @media screen and (max-width: 480px) {
@@ -686,6 +1104,7 @@ nav p {
     font-size: 220%;
   }
   .workshops {
+    background-image: url("Images/W_Background_mobile.png");
     height: auto;
     width: 100%;
   }
@@ -1318,5 +1737,10 @@ nav p {
     margin-bottom: auto;
     margin-left: 0rem;
     font-size: 180%;
+  }
+}
+@media (orientation: portrait) {
+  body {
+    flex-direction: column;
   }
 }
