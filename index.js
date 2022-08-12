@@ -49,3 +49,6 @@ function scrollFunction() {
             element[i].style.setProperty("--check-primary", "#fff");
     }
 }
+$(window).on("load",function(){
+     $(".loader-wrapper").fadeOut("slow");
+});
